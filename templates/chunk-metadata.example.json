@@ -1,0 +1,35 @@
+{
+  "chunk_id": "chunk_policy_2026_001_p03_s02",
+  "document_id": "policy_2026_001",
+  "source_uri": "https://example.com/policies/2026/001",
+  "source_system": "policy_portal",
+  "source_hash": "sha256:example",
+  "document_version": "2026-05-01",
+  "section_path": ["Benefits", "Eligibility", "Exceptions"],
+  "page_start": 3,
+  "page_end": 4,
+  "char_start": 1180,
+  "char_end": 2042,
+  "content_type": "text",
+  "language": "en",
+  "tenant_id": "tenant_a",
+  "acl": {
+    "groups": ["hr", "employee"],
+    "roles": ["benefits_reader"],
+    "relationships": ["document_viewer"]
+  },
+  "sensitivity": "internal",
+  "freshness": {
+    "source_updated_at": "2026-05-01T12:00:00Z",
+    "indexed_at": "2026-05-01T12:15:00Z",
+    "deletion_state": "active"
+  },
+  "pipeline": {
+    "parser": "docling",
+    "parser_version": "example",
+    "chunker": "structure_aware",
+    "chunker_version": "1.0.0",
+    "embedding_model": "example-embedding-model",
+    "embedding_dimension": 1536
+  }
+}

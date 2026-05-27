@@ -1,0 +1,12 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.pyc
+outputs/
+tmp/
+*.zip
+*.csv
+youtube-transcripts/

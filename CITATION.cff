@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+title: Production RAG System Design Kit
+message: If you use this architecture kit, please cite it using this metadata.
+type: software
+authors:
+  - family-names: Kumar
+    given-names: Ankit
+year: 2026
+url: https://ankitkumar3514.substack.com/p/rag-is-not-a-feature-it-is-an-evidence
+license: CC-BY-4.0

@@ -1,0 +1,46 @@
+{
+  "trace_id": "trace_2026_05_27_001",
+  "request": {
+    "query": "What exceptions apply to the 2026 benefits policy?",
+    "user_id": "user_123",
+    "tenant_id": "tenant_a",
+    "roles": ["employee"],
+    "groups": ["hr"]
+  },
+  "policy": {
+    "decision": "allow",
+    "filters": {
+      "tenant_id": "tenant_a",
+      "sensitivity_lte": "internal"
+    },
+    "obligations": ["cite_every_claim", "log_sources"]
+  },
+  "retrieval": {
+    "route": "hybrid",
+    "rewritten_queries": ["2026 benefits policy exceptions eligibility"],
+    "candidate_count": 80,
+    "selected_chunk_ids": ["chunk_policy_2026_001_p03_s02"],
+    "dropped_chunk_ids": ["chunk_policy_2025_001_p02_s01"]
+  },
+  "generation": {
+    "prompt_version": "rag_answer_v3",
+    "model": "example-model",
+    "answer_id": "answer_001",
+    "citation_chunk_ids": ["chunk_policy_2026_001_p03_s02"]
+  },
+  "evaluation": {
+    "faithfulness": 0.94,
+    "citation_support": 1.0,
+    "negative_rejection": null
+  },
+  "operations": {
+    "latency_ms": {
+      "total": 1840,
+      "retrieval": 180,
+      "reranking": 420,
+      "generation": 1120,
+      "evaluation": 120
+    },
+    "cost_usd": 0.014
+  }
+}

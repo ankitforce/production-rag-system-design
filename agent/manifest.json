@@ -1,0 +1,61 @@
+{
+  "name": "production-rag-system-design",
+  "version": "0.1.0",
+  "description": "Agent-readable architecture kit for designing, reviewing, and evaluating production RAG systems.",
+  "canonical_article_url": "https://ankitkumar3514.substack.com/p/rag-is-not-a-feature-it-is-an-evidence",
+  "read_order": [
+    "AGENTS.md",
+    "README.md",
+    "agent/tasks.md",
+    "docs/architecture-taxonomy.md",
+    "checklists/production-readiness.md",
+    "checklists/security-review.md",
+    "checklists/eval-release-gates.md"
+  ],
+  "core_docs": {
+    "system_design_guide": "docs/system-design-guide.md",
+    "technical_paper": "docs/technical-paper.md",
+    "architecture_taxonomy": "docs/architecture-taxonomy.md",
+    "production_runbook": "docs/production-runbook.md",
+    "sources": "sources.md"
+  },
+  "checklists": {
+    "production_readiness": "checklists/production-readiness.md",
+    "security_review": "checklists/security-review.md",
+    "eval_release_gates": "checklists/eval-release-gates.md"
+  },
+  "templates": {
+    "architecture_review": "templates/architecture-review-template.md",
+    "eval_plan": "templates/eval-plan-template.md",
+    "chunk_metadata_example": "templates/chunk-metadata.example.json",
+    "rag_trace_example": "templates/rag-trace.example.json"
+  },
+  "schemas": {
+    "chunk_metadata": "schemas/chunk-metadata.schema.json",
+    "rag_trace": "schemas/rag-trace.schema.json"
+  },
+  "diagrams": [
+    "diagrams/rag-evidence-supply-chain-hero.png",
+    "diagrams/rag-reference-architecture.png",
+    "diagrams/rag-online-serving-request-path.png",
+    "diagrams/rag-policy-authorization-plane.png",
+    "diagrams/rag-retrieval-eval-loop.png",
+    "diagrams/rag-multitenant-freshness-architecture.png"
+  ],
+  "allowed_agent_tasks": [
+    "architecture_review",
+    "production_readiness_score",
+    "security_review",
+    "eval_plan",
+    "metadata_schema_design",
+    "trace_logging_design",
+    "build_order_recommendation",
+    "risk_register"
+  ],
+  "default_output_directory": "outputs",
+  "safety_rules": [
+    "Do not add secrets, cookies, subscriber data, private draft URLs, or local Substack automation.",
+    "Do not claim a production system is safe without checking authorization, evaluation, observability, and deletion propagation.",
+    "Do not recommend agentic RAG before baseline retrieval, ACL enforcement, and eval gates are defined."
+  ]
+}

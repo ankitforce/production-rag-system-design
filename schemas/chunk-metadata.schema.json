@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RAG Chunk Metadata",
+  "type": "object",
+  "required": [
+    "chunk_id",
+    "document_id",
+    "source_uri",
+    "source_system",
+    "source_hash",
+    "document_version",
+    "section_path",
+    "content_type",
+    "tenant_id",
+    "acl",
+    "sensitivity",
+    "freshness",
+    "pipeline"
+  ],
+  "properties": {
+    "chunk_id": { "type": "string", "minLength": 1 },
+    "document_id": { "type": "string", "minLength": 1 },
+    "source_uri": { "type": "string", "minLength": 1 },
+    "source_system": { "type": "string", "minLength": 1 },
+    "source_hash": { "type": "string", "minLength": 1 },
+    "document_version": { "type": "string", "minLength": 1 },
+    "section_path": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "page_start": { "type": ["integer", "null"], "minimum": 1 },
+    "page_end": { "type": ["integer", "null"], "minimum": 1 },
+    "char_start": { "type": ["integer", "null"], "minimum": 0 },
+    "char_end": { "type": ["integer", "null"], "minimum": 0 },
+    "content_type": {
+      "type": "string",
+      "enum": ["text", "table", "figure", "code", "image", "layout", "mixed"]
+    },
+    "language": { "type": "string" },
+    "tenant_id": { "type": "string", "minLength": 1 },
+    "acl": {
+      "type": "object",
+      "properties": {
+        "groups": { "type": "array", "items": { "type": "string" } },
+        "roles": { "type": "array", "items": { "type": "string" } },
+        "relationships": { "type": "array", "items": { "type": "string" } }
+      },
+      "additionalProperties": true
+    },
+    "sensitivity": {
+      "type": "string",
+      "enum": ["public", "internal", "confidential", "restricted"]
+    },
+    "freshness": {
+      "type": "object",
+      "required": ["source_updated_at", "indexed_at", "deletion_state"],
+      "properties": {
+        "source_updated_at": { "type": "string" },
+        "indexed_at": { "type": "string" },
+        "deletion_state": {
+          "type": "string",
+          "enum": ["active", "deleted", "revoked", "stale"]
+        }
+      },
+      "additionalProperties": true
+    },
+    "pipeline": {
+      "type": "object",
+      "required": ["parser", "parser_version", "chunker", "chunker_version", "embedding_model", "embedding_dimension"],
+      "properties": {
+        "parser": { "type": "string" },
+        "parser_version": { "type": "string" },
+        "chunker": { "type": "string" },
+        "chunker_version": { "type": "string" },
+        "embedding_model": { "type": "string" },
+        "embedding_dimension": { "type": "integer", "minimum": 1 }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}
