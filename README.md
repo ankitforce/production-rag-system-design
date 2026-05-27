@@ -2,6 +2,9 @@
 
 A practical companion repo for the Substack essay ["RAG Is Not a Feature. It Is an Evidence Supply Chain"](https://ankitkumar3514.substack.com/p/rag-is-not-a-feature-it-is-an-evidence).
 
+**Read the essay:** [RAG Is Not a Feature. It Is an Evidence Supply Chain](https://ankitkumar3514.substack.com/p/rag-is-not-a-feature-it-is-an-evidence)  
+**Use the kit:** diagrams, checklists, schemas, templates, and agent task cards in this repo.
+
 This is not a mirror of the blog. It is a reusable architecture kit for engineers, technical product leaders, and agentic coding/research tools that need to design, review, or evaluate production Retrieval-Augmented Generation systems.
 
 ![Production RAG reference architecture](diagrams/rag-reference-architecture.png)

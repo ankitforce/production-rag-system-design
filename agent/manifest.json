@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Agent-readable architecture kit for designing, reviewing, and evaluating production RAG systems.",
   "canonical_article_url": "https://ankitkumar3514.substack.com/p/rag-is-not-a-feature-it-is-an-evidence",
+  "public_repo_url": "https://github.com/ankitforce/production-rag-system-design",
   "read_order": [
     "AGENTS.md",
     "README.md",
